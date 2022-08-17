@@ -11,7 +11,7 @@ phases:
       - ls -l
       - pwd
       - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
-      - REPOSITORY_URI=321031546268.dkr.ecr.us-west-1.amazonaws.com/webappdemo
+      - REPOSITORY_URI=122921296681.dkr.ecr.us-west-2.amazonaws.com/demowebcontainer
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=${COMMIT_HASH:=latest}
   build:
